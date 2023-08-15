@@ -15,16 +15,18 @@ go get -u github.com/Limpid-LLC/roles-permissions-helper@v1.0.1
 ```go
 import "github.com/Limpid-LLC/roles-permissions-helper"
 
-func main() {
+func test() {
+	
     // without parsing "$stoId" etc.
-    ownerRolePermissionsConfigWithoutParsing := role_permissions_config.GetOwnerRoleConfig()
+    ownerRolePermissionsConfig := role_permissions_config.GetOwnerRoleConfig()
 
 
-    // with parsing "$stoId" etc.
+	// map for change "$stoId" to "any_sto_internal_id_you_want"
     paramsToChange := make(map[string]string)
     paramsToChange["$stoId"] = "any_sto_internal_id_you_want"
-    
-    parsedData, errParsing := role_permissions_parser.GetOwnerRoleParsed(paramsToChange)
+
+    // with parsing "$stoId" etc.
+    ownerRolePermissionsParsed, errParsing := role_permissions_parser.GetOwnerRoleParsed(paramsToChange)
     if errParsing != nil {
         log.Printf("Error parsing role: %v", errParsing)
         return
