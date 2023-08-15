@@ -6,9 +6,14 @@ import (
 )
 
 func GetOwnerRoleParsed(paramsToChange map[string]string) (*role_permissions_models.Role, error) {
-	ownerRoleConfig, errRole := role_permissions_config.GetOwnerRoleConfig().Clone()
-	if errRole != nil {
-		return nil, errRole
+	ownerRoleConfigLoaded, errRoleLoad := role_permissions_config.GetOwnerRoleConfig()
+	if errRoleLoad != nil {
+		return nil, errRoleLoad
+	}
+
+	ownerRoleConfig, errRoleClone := ownerRoleConfigLoaded.Clone()
+	if errRoleClone != nil {
+		return nil, errRoleClone
 	}
 
 	for changeFrom, changeTo := range paramsToChange {

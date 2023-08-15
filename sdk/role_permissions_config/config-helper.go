@@ -7,12 +7,12 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
-func GetOwnerRoleConfig() *role_permissions_models.Role {
+func GetOwnerRoleConfig() (*role_permissions_models.Role, error) {
 	// Read the content of the YAML file
 	content, err := roles_permissions_helper.GetOwnerRoleContent()
 	if err != nil {
 		fmt.Printf("Error reading file: %v", err)
-		return nil
+		return nil, err
 	}
 
 	// Parse the YAML content into the Config struct
@@ -20,8 +20,8 @@ func GetOwnerRoleConfig() *role_permissions_models.Role {
 
 	if err := yaml.Unmarshal(content, &role); err != nil {
 		fmt.Printf("Error parsing YAML: %v", err)
-		return nil
+		return nil, err
 	}
 
-	return &role
+	return &role, nil
 }
