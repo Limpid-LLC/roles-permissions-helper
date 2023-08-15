@@ -1,4 +1,4 @@
-module roles-permissions-helper
+module github.com/Limpid-LLC/roles-permissions-helper
 
 go 1.20
 
