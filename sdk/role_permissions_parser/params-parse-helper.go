@@ -1,8 +1,8 @@
 package role_permissions_parser
 
 import (
-	"roles-permissions-helper/sdk/role_permissions_config"
-	"roles-permissions-helper/sdk/role_permissions_models"
+	"github.com/Limpid-LLC/roles-permissions-helper/sdk/role_permissions_config"
+	"github.com/Limpid-LLC/roles-permissions-helper/sdk/role_permissions_models"
 )
 
 func GetOwnerRoleParsed(paramsToChange map[string]string) (*role_permissions_models.Role, error) {

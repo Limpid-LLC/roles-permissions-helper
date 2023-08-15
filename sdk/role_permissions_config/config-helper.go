@@ -2,9 +2,9 @@ package role_permissions_config
 
 import (
 	"fmt"
+	"github.com/Limpid-LLC/roles-permissions-helper/sdk/role_permissions_models"
 	"gopkg.in/yaml.v2"
 	"os"
-	"roles-permissions-helper/sdk/role_permissions_models"
 )
 
 const (
