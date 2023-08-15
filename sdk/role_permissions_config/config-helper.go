@@ -2,7 +2,7 @@ package role_permissions_config
 
 import (
 	"fmt"
-	roles_permissions_helper "github.com/Limpid-LLC/roles-permissions-helper"
+	"github.com/Limpid-LLC/roles-permissions-helper"
 	"github.com/Limpid-LLC/roles-permissions-helper/sdk/role_permissions_models"
 	"gopkg.in/yaml.v2"
 	"os"

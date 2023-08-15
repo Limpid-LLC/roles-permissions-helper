@@ -4,39 +4,39 @@ data: {}
 permissions:
 
   # Go-Auth Service routes
-  - microservice: "go-auth-2"
+  - microservice: "go-auth"
     method: "update_user"
     required_params: []
     restricted_params: []
-  - microservice: "go-auth-2"
+  - microservice: "go-auth"
     method: "get_users"
     required_params: []
     restricted_params: []
-  - microservice: "go-auth-2"
+  - microservice: "go-auth"
     method: "delete_users"
     required_params: []
     restricted_params: []
-  - microservice: "go-auth-2"
+  - microservice: "go-auth"
     method: "create_role"
     required_params: []
     restricted_params: []
-  - microservice: "go-auth-2"
+  - microservice: "go-auth"
     method: "update_roles"
     required_params: []
     restricted_params: []
-  - microservice: "go-auth-2"
+  - microservice: "go-auth"
     method: "delete_roles"
     required_params: []
     restricted_params: []
-  - microservice: "go-auth-2"
+  - microservice: "go-auth"
     method: "attach_role"
     required_params: []
     restricted_params: []
-  - microservice: "go-auth-2"
+  - microservice: "go-auth"
     method: "detach_role"
     required_params: []
     restricted_params: []
-  - microservice: "go-auth-2"
+  - microservice: "go-auth"
     method: "get_roles"
     required_params: []
     restricted_params: []
