@@ -8,7 +8,7 @@ go get github.com/Limpid-LLC/roles-permissions-helper
 
 ## Update version
 ```bash
-go get -u github.com/Limpid-LLC/roles-permissions-helper@v1.0.1
+go get -u github.com/Limpid-LLC/roles-permissions-helper@v1.0.2
 ```
 
 ## Usage
