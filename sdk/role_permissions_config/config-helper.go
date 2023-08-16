@@ -2,7 +2,6 @@ package role_permissions_config
 
 import (
 	"fmt"
-	"github.com/Limpid-LLC/roles-permissions-helper"
 	"github.com/Limpid-LLC/roles-permissions-helper/sdk/role_permissions_models"
 	"gopkg.in/yaml.v2"
 	"os"
@@ -14,11 +13,12 @@ const (
 )
 
 func GetOwnerRoleConfig() (*role_permissions_models.Role, error) {
-	libRootPath, errPath := roles_permissions_helper.GetLibraryRootPath()
-	if errPath != nil {
-		fmt.Printf("Error getting root path: %v", errPath)
-		return nil, errPath
-	}
+	//libRootPath, errPath := roles_permissions_helper.GetLibraryRootPath()
+	//if errPath != nil {
+	//	fmt.Printf("Error getting root path: %v", errPath)
+	//	return nil, errPath
+	//}
+	libRootPath := ""
 
 	// Read the content of the YAML file
 	content, err := os.ReadFile(filepath.Join(libRootPath, OwnerRolePermissionFilename))
