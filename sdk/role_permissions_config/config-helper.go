@@ -13,6 +13,7 @@ const (
 	OwnerRolePermissionFilename = "owner_role_permissions.yml"
 )
 
+//go:embed config/owner_role_permissions.yml
 var content embed.FS
 
 func GetOwnerRoleConfig() (*role_permissions_models.Role, error) {
