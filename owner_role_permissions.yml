@@ -737,3 +737,21 @@ permissions:
         values:
           - "$stoId"
     restricted_params: []
+
+  # UtilitySyncService routes
+  - microservice: "UtilitySyncService"
+    method: "sync_order_settings_templates"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "UtilitySyncService"
+    method: "sync_sto_owner_roles_permissions"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
