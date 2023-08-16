@@ -1,0 +1,757 @@
+type: "sto_access"
+sto_id: "$stoId"
+data: {}
+permissions:
+
+  # Go-Auth Service routes
+  - microservice: "go-auth"
+    method: "update_user"
+    required_params: []
+    restricted_params: []
+  - microservice: "go-auth"
+    method: "get_users"
+    required_params: []
+    restricted_params: []
+  - microservice: "go-auth"
+    method: "delete_users"
+    required_params: []
+    restricted_params: []
+  - microservice: "go-auth"
+    method: "create_role"
+    required_params: []
+    restricted_params: []
+  - microservice: "go-auth"
+    method: "update_roles"
+    required_params: []
+    restricted_params: []
+  - microservice: "go-auth"
+    method: "delete_roles"
+    required_params: []
+    restricted_params: []
+  - microservice: "go-auth"
+    method: "attach_role"
+    required_params: []
+    restricted_params: []
+  - microservice: "go-auth"
+    method: "detach_role"
+    required_params: []
+    restricted_params: []
+  - microservice: "go-auth"
+    method: "get_roles"
+    required_params: []
+    restricted_params: []
+
+  # CountriesCatalog Service routes
+  - microservice: "CountriesCatalog"
+    method: "add_country"
+    required_params: []
+    restricted_params: []
+  - microservice: "CountriesCatalog"
+    method: "get_countries"
+    required_params: []
+    restricted_params: []
+  - microservice: "CountriesCatalog"
+    method: "edit_country"
+    required_params: []
+    restricted_params: []
+  - microservice: "CountriesCatalog"
+    method: "edit_country"
+    required_params: []
+    restricted_params: []
+  - microservice: "CountriesCatalog"
+    method: "remove_country"
+    required_params: []
+    restricted_params: []
+  - microservice: "CountriesCatalog"
+    method: "get_timezones"
+    required_params: []
+    restricted_params: []
+  - microservice: "CountriesCatalog"
+    method: "add_timezones"
+    required_params: []
+    restricted_params: []
+  - microservice: "CountriesCatalog"
+    method: "get_currencies"
+    required_params: []
+    restricted_params: []
+  - microservice: "CountriesCatalog"
+    method: "add_currency"
+    required_params: []
+    restricted_params: []
+
+  # CalendarService routes
+  - microservice: "CalendarService"
+    method: "get"
+    required_params: []
+    restricted_params: []
+  - microservice: "CalendarService"
+    method: "add"
+    required_params: []
+    restricted_params: []
+  - microservice: "CalendarService"
+    method: "update"
+    required_params: []
+    restricted_params: []
+  - microservice: "CalendarService"
+    method: "remove"
+    required_params: []
+    restricted_params: []
+
+  # GlobalVehicleModelsCatalog service routes
+  - microservice: "GlobalVehicleModelsCatalog"
+    method: "get"
+    required_params: []
+    restricted_params: []
+  - microservice: "GlobalVehicleModelsCatalog"
+    method: "save"
+    required_params: []
+    restricted_params: []
+  - microservice: "GlobalVehicleModelsCatalog"
+    method: "edit"
+    required_params: []
+    restricted_params: []
+  - microservice: "GlobalVehicleModelsCatalog"
+    method: "remove"
+    required_params: []
+    restricted_params: []
+
+  # CategoryService routes
+  - microservice: "CategoryService"
+    method: "index_service"
+    required_params: []
+    restricted_params: []
+
+  # TurboSmsService routes
+  - microservice: "TurboSmsService"
+    method: "send"
+    required_params: []
+    restricted_params: []
+
+
+  # EmailService routes
+  - microservice: "EmailService"
+    method: "send"
+    required_params: []
+    restricted_params: []
+
+  # WebsocketService routes
+  - microservice: "WebsocketService"
+    method: "send"
+    required_params: []
+    restricted_params: []
+
+  # OpenDataBot service routes
+  - microservice: "OpenDataBot"
+    method: "find"
+    required_params: []
+    restricted_params: []
+
+  # ServicesStationsService routes
+  - microservice: "ServicesStationsService"
+    method: "index"
+    required_params: []
+    restricted_params: []
+  - microservice: "ServicesStationsService"
+    method: "create"
+    required_params: []
+    restricted_params: []
+  - microservice: "ServicesStationsService"
+    method: "getById"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "ServicesStationsService"
+    method: "edit"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "ServicesStationsService"
+    method: "remove"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "ServicesStationsService"
+    method: "search_categories_services"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "ServicesStationsService"
+    method: "update_specializations"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "ServicesStationsService"
+    method: "update_order_settings"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "ServicesStationsService"
+    method: "update_categories_services"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "ServicesStationsService"
+    method: "upsert_custom_services"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+
+  # CategoryHelperService routes
+  - microservice: "CategoryHelperService"
+    method: "get"
+    required_params:
+      - all: false
+        param: "sto_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "CategoryHelperService"
+    method: "load"
+    required_params: []
+    restricted_params: []
+  - microservice: "CategoryHelperService"
+    method: "relationships"
+    required_params: []
+    restricted_params: []
+
+  # OrdersService routes
+  - microservice: "OrdersService"
+    method: "index"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "OrdersService"
+    method: "getById"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "OrdersService"
+    method: "create"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "OrdersService"
+    method: "edit"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "OrdersService"
+    method: "remove"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+
+  # DocumentService routes
+  - microservice: "DocumentService"
+    method: "get"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "DocumentService"
+    method: "generate_document"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+
+  # PostService routes
+  - microservice: "PostService"
+    method: "index"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "PostService"
+    method: "create"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "PostService"
+    method: "update"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "PostService"
+    method: "remove"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+
+  # EmployeeService routes
+  - microservice: "EmployeeService"
+    method: "get"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "EmployeeService"
+    method: "create"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "EmployeeService"
+    method: "update"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "EmployeeService"
+    method: "remove"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "EmployeeService"
+    method: "attach"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+
+  # ClientService routes
+  - microservice: "ClientService"
+    method: "get"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "ClientService"
+    method: "create"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "ClientService"
+    method: "update"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "ClientService"
+    method: "remove"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "ClientService"
+    method: "attach"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+
+  # VehicleService routes
+  - microservice: "VehicleService"
+    method: "get"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "VehicleService"
+    method: "add"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "VehicleService"
+    method: "update"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "VehicleService"
+    method: "remove"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+
+  # DiagnosticCardService routes
+  - microservice: "DiagnosticCardService"
+    method: "get"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "DiagnosticCardService"
+    method: "add"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "DiagnosticCardService"
+    method: "update"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "DiagnosticCardService"
+    method: "remove"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "DiagnosticCardService"
+    method: "get_tag"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "DiagnosticCardService"
+    method: "add_tag"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "DiagnosticCardService"
+    method: "update_tag"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "DiagnosticCardService"
+    method: "remove_tag"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "DiagnosticCardService"
+    method: "get_point"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "DiagnosticCardService"
+    method: "add_point"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "DiagnosticCardService"
+    method: "update_point"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "DiagnosticCardService"
+    method: "remove_point"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+
+  # ImportService routes
+  - microservice: "ImportService"
+    method: "get_service_import_template"
+    required_params: []
+    restricted_params: []
+  - microservice: "ImportService"
+    method: "import_services"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "ImportService"
+    method: "get_client_import_template"
+    required_params: []
+    restricted_params: []
+  - microservice: "ImportService"
+    method: "import_clients"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+
+  # ExportServices service routes
+  - microservice: "ExportServices"
+    method: "services_export"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "ExportServices"
+    method: "vehicles_export"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "ExportServices"
+    method: "clients_export"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "ExportServices"
+    method: "appointments_report_export"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "ExportServices"
+    method: "car_arrivals_report_export"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "ExportServices"
+    method: "average_check_excluding_vat_report_export"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "ExportServices"
+    method: "money_turnover_including_vat_report_export"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "ExportServices"
+    method: "margin_goods_excluding_vat_report_export"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "ExportServices"
+    method: "cash_inflow_including_vat_report_export"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "ExportServices"
+    method: "fixiq_records_report_export"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "ExportServices"
+    method: "previous_appointments_report_export"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "ExportServices"
+    method: "canceled_appointments_report_export"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "ExportServices"
+    method: "employee_report_export"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+
+  # PaymentService routes
+  - microservice: "PaymentService"
+    method: "getPlan"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "PaymentService"
+    method: "syncPlan"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "PaymentService"
+    method: "updatePlan"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "PaymentService"
+    method: "changePlan"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "PaymentService"
+    method: "generateCheckoutLink"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "PaymentService"
+    method: "getSubscription"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "PaymentService"
+    method: "terminateSubscription"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+
+  # UtilitySyncService routes
+  - microservice: "UtilitySyncService"
+    method: "sync_order_settings_templates"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "UtilitySyncService"
+    method: "sync_sto_owner_roles_permissions"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
