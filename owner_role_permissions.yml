@@ -755,3 +755,29 @@ permissions:
         values:
           - "$stoId"
     restricted_params: []
+
+   #HelperServices
+  - microservice: "HelperServices"
+    method: "get_custom_services"
+    required_params: [ ]
+    restricted_params: [ ]
+  - microservice: "HelperServices"
+    method: "get_services"
+    required_params: [ ]
+    restricted_params: [ ]
+  - microservice: "HelperServices"
+    method: "save_custom_service"
+    required_params: [ ]
+    restricted_params: [ ]
+  - microservice: "HelperServices"
+    method: "bulk_save_custom_service"
+    required_params: [ ]
+    restricted_params: [ ]
+  - microservice: "HelperServices"
+    method: "save_child_custom_service"
+    required_params: [ ]
+    restricted_params: [ ]
+  - microservice: "HelperServices"
+    method: "edit_custom_service"
+    required_params: [ ]
+    restricted_params: [ ]
