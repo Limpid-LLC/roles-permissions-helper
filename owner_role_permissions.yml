@@ -809,7 +809,11 @@ permissions:
     restricted_params: [ ]
   - microservice: "CustomServices"
     method: "update"
-    required_params: [ ]
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
     restricted_params: [ ]
   - microservice: "CustomServices"
     method: "delete"
