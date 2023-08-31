@@ -781,3 +781,41 @@ permissions:
     method: "edit_custom_service"
     required_params: [ ]
     restricted_params: [ ]
+
+  #CustomServices
+  - microservice: "CustomServices"
+    method: "create"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "CustomServices"
+    method: "bulk_create"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "CustomServices"
+    method: "get"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "CustomServices"
+    method: "update"
+    required_params: [ ]
+    restricted_params: [ ]
+  - microservice: "CustomServices"
+    method: "delete"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
