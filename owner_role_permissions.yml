@@ -800,7 +800,23 @@ permissions:
           - "$stoId"
     restricted_params: [ ]
   - microservice: "CustomServices"
+    method: "import_default_services"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "CustomServices"
     method: "get"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "CustomServices"
+    method: "get_tree"
     required_params:
       - all: false
         param: "service_station_id"
