@@ -832,6 +832,22 @@ permissions:
           - "$stoId"
     restricted_params: [ ]
   - microservice: "CustomServices"
+    method: "sync_services_post"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "CustomServices"
+    method: "sync_services_employee"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "CustomServices"
     method: "delete"
     required_params:
       - all: false
