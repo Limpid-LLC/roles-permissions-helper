@@ -11,7 +11,20 @@ func GetOwnerRoleParsed(paramsToChange map[string]string) (*role_permissions_mod
 		return nil, errRoleLoad
 	}
 
-	ownerRoleConfig, errRoleClone := ownerRoleConfigLoaded.Clone()
+	return prepareRole(ownerRoleConfigLoaded, paramsToChange)
+}
+
+func GetSupportAdminRoleParsed(paramsToChange map[string]string) (*role_permissions_models.Role, error) {
+	ownerRoleConfigLoaded, errRoleLoad := role_permissions_config.GetOwnerRoleConfig()
+	if errRoleLoad != nil {
+		return nil, errRoleLoad
+	}
+
+	return prepareRole(ownerRoleConfigLoaded, paramsToChange)
+}
+
+func prepareRole(loadedRole *role_permissions_models.Role, paramsToChange map[string]string) (*role_permissions_models.Role, error) {
+	ownerRoleConfig, errRoleClone := loadedRole.Clone()
 	if errRoleClone != nil {
 		return nil, errRoleClone
 	}

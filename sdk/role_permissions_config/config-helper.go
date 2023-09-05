@@ -9,10 +9,19 @@ import (
 )
 
 const (
-	OwnerRolePermissionFilename = "owner_role_permissions.yml"
+	OwnerRolePermissionFilename        = "owner_role_permissions.yml"
+	SupportAdminRolePermissionFilename = "support_admin_role_permissions.yml"
 )
 
 func GetOwnerRoleConfig() (*role_permissions_models.Role, error) {
+	return loadYmlToRole(OwnerRolePermissionFilename)
+}
+
+func GetSupportAdminRoleConfig() (*role_permissions_models.Role, error) {
+	return loadYmlToRole(SupportAdminRolePermissionFilename)
+}
+
+func loadYmlToRole(ymlLocationPath string) (*role_permissions_models.Role, error) {
 	//libRootPath, errPath := roles_permissions_helper.GetLibraryRootPath()
 	//if errPath != nil {
 	//	fmt.Printf("Error getting root path: %v", errPath)
@@ -21,7 +30,7 @@ func GetOwnerRoleConfig() (*role_permissions_models.Role, error) {
 	libRootPath := ""
 
 	// Read the content of the YAML file
-	content, err := os.ReadFile(filepath.Join(libRootPath, OwnerRolePermissionFilename))
+	content, err := os.ReadFile(filepath.Join(libRootPath, ymlLocationPath))
 	if err != nil {
 		fmt.Printf("Error reading file: %v", err)
 		return nil, err
