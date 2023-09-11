@@ -855,3 +855,123 @@ permissions:
         values:
           - "$stoId"
     restricted_params: [ ]
+
+  #ReportService-templates
+  - microservice: "ReportService"
+    method: "templates.getTemplates"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "templates.createTemplate"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "templates.updateTemplate"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "templates.deleteTemplate"
+    required_params: []
+    restricted_params: []
+
+  #ReportService-schedules
+  - microservice: "ReportService"
+    method: "schedules.counts"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "schedules.posts"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "schedules.applications"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "schedules.applicationsChecked"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "schedules.applicationsRegister"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "schedules.applicationsCanceled"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "schedules.applicationsAvg"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "schedules.applicationsSum"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "schedules.applicationsFixiq"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "schedules.applicationsProfit"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "schedules.paymentsIncome"
+    required_params: []
+    restricted_params: []
+
+  #ReportService-tables
+  - microservice: "ReportService"
+    method: "tables.applications"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "tables.applicationsChecked"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "tables.applicationsRegister"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "tables.applicationsCanceled"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "tables.applicationsAvg"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "tables.applicationsSum"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "tables.applicationsFixiq"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "tables.applicationsProfit"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "tables.paymentsIncome"
+    required_params: []
+    restricted_params: []
+
+  #ReportService-users
+  - microservice: "ReportService"
+    method: "users.applications"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "users.applicationsByUser"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "users.services"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "users.servicesByUser"
+    required_params: []
+    restricted_params: []
