@@ -373,6 +373,14 @@ permissions:
         values:
           - "$stoId"
     restricted_params: []
+  - microservice: "EmployeeService"
+    method: "syncEmployeeUserRole"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
 
   # ClientService routes
   - microservice: "ClientService"
