@@ -5,11 +5,11 @@ import (
 )
 
 type Role struct {
-	Id          string            `json:"internal_id,omitempty" yaml:"internal_id,omitempty"`
-	Type        string            `json:"type" yaml:"type"`
-	StoId       string            `json:"sto_id" yaml:"sto_id"`
-	Data        map[string]string `json:"data" yaml:"data"`
-	Permissions []RolePermission  `json:"permissions" yaml:"permissions"`
+	Id          string                 `json:"internal_id,omitempty" yaml:"internal_id,omitempty"`
+	Type        string                 `json:"type" yaml:"type"`
+	StoId       string                 `json:"sto_id" yaml:"sto_id"`
+	Data        map[string]interface{} `json:"data" yaml:"data"`
+	Permissions []RolePermission       `json:"permissions" yaml:"permissions"`
 }
 
 type RolePermission struct {
