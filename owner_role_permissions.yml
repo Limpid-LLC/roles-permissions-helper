@@ -983,3 +983,37 @@ permissions:
     method: "users.servicesByUser"
     required_params: []
     restricted_params: []
+
+  #PriceTypes
+  - microservice: "PriceTypes"
+    method: "create"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "PriceTypes"
+    method: "index"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "PriceTypes"
+    method: "update"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "PriceTypes"
+    method: "delete"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
