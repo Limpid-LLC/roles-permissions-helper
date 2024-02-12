@@ -381,6 +381,22 @@ permissions:
         values:
           - "$stoId"
     restricted_params: []
+  - microservice: "EmployeeService"
+      method: "attach_salary_scheme"
+      required_params:
+        - all: false
+          param: "service_station_id"
+          values:
+            - "$stoId"
+      restricted_params: [ ]
+  - microservice: "EmployeeService"
+      method: "detach_salary_scheme"
+      required_params:
+        - all: false
+          param: "service_station_id"
+          values:
+            - "$stoId"
+      restricted_params: [ ]
 
   # ClientService routes
   - microservice: "ClientService"
@@ -1014,6 +1030,86 @@ permissions:
     required_params:
       - all: false
         param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+
+  #GoReportService
+  - microservice: "GoReportService"
+    method: "index"
+    required_params:
+      - all: false
+        param: "sto_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "GoReportService"
+    method: "reindex"
+    required_params:
+      - all: false
+        param: "sto_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "GoReportService"
+    method: "report"
+    required_params:
+      - all: false
+        param: "sto_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "GoReportService"
+    method: "salary_index"
+    required_params:
+      - all: false
+        param: "sto_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "GoReportService"
+    method: "salary_update"
+    required_params:
+      - all: false
+        param: "sto_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+
+  #SalaryScheme
+  - microservice: "SalaryScheme"
+    method: "save"
+    required_params:
+      - all: false
+        param: "data.sto_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "SalaryScheme"
+    method: "get"
+    required_params:
+      - all: false
+        param: "select.sto_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "SalaryScheme"
+    method: "update"
+    required_params:
+      - all: false
+        param: "select.sto_id"
+        values:
+          - "$stoId"
+      - all: false
+          param: "data.sto_id"
+          values:
+            - "$stoId"
+    restricted_params: [ ]
+  - microservice: "SalaryScheme"
+    method: "delete"
+    required_params:
+      - all: false
+        param: "select.sto_id"
         values:
           - "$stoId"
     restricted_params: [ ]
