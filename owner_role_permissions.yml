@@ -114,6 +114,58 @@ permissions:
     method: "remove"
     required_params: []
     restricted_params: []
+  - microservice: "GlobalVehicleModelsCatalog"
+    method: "modification_get"
+    required_params: []
+    restricted_params: []
+  - microservice: "GlobalVehicleModelsCatalog"
+    method: "modification_save"
+    required_params: []
+    restricted_params: []
+  - microservice: "GlobalVehicleModelsCatalog"
+    method: "modification_edit"
+    required_params: []
+    restricted_params: []
+  - microservice: "GlobalVehicleModelsCatalog"
+    method: "modification_remove"
+    required_params: []
+    restricted_params: []
+
+  # GlobalAeroModelsCatalog service routes
+  - microservice: "GlobalAeroModelsCatalog"
+    method: "get"
+    required_params: [ ]
+    restricted_params: [ ]
+  - microservice: "GlobalAeroModelsCatalog"
+    method: "save"
+    required_params: [ ]
+    restricted_params: [ ]
+  - microservice: "GlobalAeroModelsCatalog"
+    method: "edit"
+    required_params: [ ]
+    restricted_params: [ ]
+  - microservice: "GlobalAeroModelsCatalog"
+    method: "remove"
+    required_params: [ ]
+    restricted_params: [ ]
+
+  # GlobalSherpModelsCatalog service routes
+  - microservice: "GlobalSherpModelsCatalog"
+    method: "get"
+    required_params: [ ]
+    restricted_params: [ ]
+  - microservice: "GlobalSherpModelsCatalog"
+    method: "save"
+    required_params: [ ]
+    restricted_params: [ ]
+  - microservice: "GlobalSherpModelsCatalog"
+    method: "edit"
+    required_params: [ ]
+    restricted_params: [ ]
+  - microservice: "GlobalSherpModelsCatalog"
+    method: "remove"
+    required_params: [ ]
+    restricted_params: [ ]
 
   # CategoryService routes
   - microservice: "CategoryService"
@@ -213,6 +265,14 @@ permissions:
     restricted_params: []
   - microservice: "ServicesStationsService"
     method: "upsert_custom_services"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "ServicesStationsService"
+    method: "sync_act_acceptance_templates_examples"
     required_params:
       - all: false
         param: "service_station_id"
@@ -382,21 +442,21 @@ permissions:
           - "$stoId"
     restricted_params: []
   - microservice: "EmployeeService"
-      method: "attach_salary_scheme"
-      required_params:
-        - all: false
-          param: "service_station_id"
-          values:
-            - "$stoId"
-      restricted_params: [ ]
+    method: "attach_salary_scheme"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
   - microservice: "EmployeeService"
-      method: "detach_salary_scheme"
-      required_params:
-        - all: false
-          param: "service_station_id"
-          values:
-            - "$stoId"
-      restricted_params: [ ]
+    method: "detach_salary_scheme"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
 
   # ClientService routes
   - microservice: "ClientService"
@@ -780,7 +840,7 @@ permissions:
           - "$stoId"
     restricted_params: []
 
-   #HelperServices
+  #HelperServices
   - microservice: "HelperServices"
     method: "get_custom_services"
     required_params: [ ]
@@ -825,6 +885,14 @@ permissions:
     restricted_params: [ ]
   - microservice: "CustomServices"
     method: "import_default_services"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "CustomServices"
+    method: "import_default_services_sherp"
     required_params:
       - all: false
         param: "service_station_id"
@@ -1008,7 +1076,7 @@ permissions:
         param: "service_station_id"
         values:
           - "$stoId"
-    restricted_params: [ ]
+    restricted_params: []
   - microservice: "PriceTypes"
     method: "index"
     required_params:
@@ -1016,7 +1084,7 @@ permissions:
         param: "service_station_id"
         values:
           - "$stoId"
-    restricted_params: [ ]
+    restricted_params: []
   - microservice: "PriceTypes"
     method: "update"
     required_params:
@@ -1024,7 +1092,7 @@ permissions:
         param: "service_station_id"
         values:
           - "$stoId"
-    restricted_params: [ ]
+    restricted_params: []
   - microservice: "PriceTypes"
     method: "delete"
     required_params:
@@ -1032,7 +1100,7 @@ permissions:
         param: "service_station_id"
         values:
           - "$stoId"
-    restricted_params: [ ]
+    restricted_params: []
 
   #GoReportService
   - microservice: "GoReportService"
@@ -1076,6 +1144,110 @@ permissions:
           - "$stoId"
     restricted_params: [ ]
 
+  #DictionaryService
+  - microservice: "Dictionary"
+    method: "create"
+    required_params:
+      - all: false
+        param: "document.sto_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "Dictionary"
+    method: "read"
+    required_params:
+      - all: false
+        param: "select.sto_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "Dictionary"
+    method: "update"
+    required_params:
+      - all: false
+        param: "select.sto_id"
+        values:
+          - "$stoId"
+      - all: false
+        param: "document.sto_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "Dictionary"
+    method: "delete"
+    required_params:
+      - all: false
+        param: "select.sto_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+
+
+  #ManagementAccountingDictionaryService
+  - microservice: "ManagementAccountingDictionary"
+    method: "save"
+    required_params:
+      - all: false
+        param: "document.sto_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "ManagementAccountingDictionary"
+    method: "get"
+    required_params:
+      - all: false
+        param: "select.sto_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "ManagementAccountingDictionary"
+    method: "update"
+    required_params:
+      - all: false
+        param: "select.sto_id"
+        values:
+          - "$stoId"
+      - all: false
+        param: "document.sto_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "ManagementAccountingDictionary"
+    method: "delete"
+    required_params:
+      - all: false
+        param: "select.sto_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+
+
+  #NotificationsService
+  - microservice: "NotificationsService"
+    method: "create_custom_delayed"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "NotificationsService"
+    method: "index"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "NotificationsService"
+    method: "update"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+
   #SalaryScheme
   - microservice: "SalaryScheme"
     method: "save"
@@ -1101,15 +1273,25 @@ permissions:
         values:
           - "$stoId"
       - all: false
-          param: "data.sto_id"
-          values:
-            - "$stoId"
+        param: "data.sto_id"
+        values:
+          - "$stoId"
     restricted_params: [ ]
   - microservice: "SalaryScheme"
     method: "delete"
     required_params:
       - all: false
         param: "select.sto_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+
+  #EmployeeRolesHelper
+  - microservice: "EmployeeRolesHelper"
+    method: "sto.make_employees_roles"
+    required_params:
+      - all: false
+        param: "service_station_id"
         values:
           - "$stoId"
     restricted_params: [ ]
