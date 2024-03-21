@@ -1286,6 +1286,33 @@ permissions:
           - "$stoId"
     restricted_params: [ ]
 
+
+  #NotificationsService
+  - microservice: "NotificationsService"
+    method: "create_custom_delayed"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "NotificationsService"
+    method: "index"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "NotificationsService"
+    method: "update"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+
   #EmployeeRolesHelper
   - microservice: "EmployeeRolesHelper"
     method: "sto.make_employees_roles"
