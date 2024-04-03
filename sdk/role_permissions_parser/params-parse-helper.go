@@ -15,7 +15,7 @@ func GetOwnerRoleParsed(paramsToChange map[string]string) (*role_permissions_mod
 }
 
 func GetSupportAdminRoleParsed(paramsToChange map[string]string) (*role_permissions_models.Role, error) {
-	ownerRoleConfigLoaded, errRoleLoad := role_permissions_config.GetOwnerRoleConfig()
+	ownerRoleConfigLoaded, errRoleLoad := role_permissions_config.GetSupportAdminRoleConfig()
 	if errRoleLoad != nil {
 		return nil, errRoleLoad
 	}
