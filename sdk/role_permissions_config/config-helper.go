@@ -11,6 +11,7 @@ import (
 const (
 	OwnerRolePermissionFilename        = "owner_role_permissions.yml"
 	SupportAdminRolePermissionFilename = "support_admin_role_permissions.yml"
+	PublicRolePermissionFilename       = "public_role_permissions.yml"
 )
 
 func GetOwnerRoleConfig() (*role_permissions_models.Role, error) {
@@ -19,6 +20,9 @@ func GetOwnerRoleConfig() (*role_permissions_models.Role, error) {
 
 func GetSupportAdminRoleConfig() (*role_permissions_models.Role, error) {
 	return loadYmlToRole(SupportAdminRolePermissionFilename)
+}
+func GetPublicRoleConfig() (*role_permissions_models.Role, error) {
+	return loadYmlToRole(PublicRolePermissionFilename)
 }
 
 func loadYmlToRole(ymlLocationPath string) (*role_permissions_models.Role, error) {

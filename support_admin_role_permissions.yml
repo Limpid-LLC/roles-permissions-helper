@@ -7,17 +7,77 @@ permissions:
 
   # Go-Auth Service routes
   - microservice: "go-auth"
+    method: "update_user"
+    required_params: []
+    restricted_params: []
+  - microservice: "go-auth"
     method: "get_users"
+    required_params: []
+    restricted_params: []
+  - microservice: "go-auth"
+    method: "block_users"
+    required_params: []
+    restricted_params: []
+  - microservice: "go-auth"
+    method: "activate_users"
+    required_params: []
+    restricted_params: []
+  - microservice: "go-auth"
+    method: "delete_users"
+    required_params: []
+    restricted_params: []
+  - microservice: "go-auth"
+    method: "create_role"
+    required_params: []
+    restricted_params: []
+  - microservice: "go-auth"
+    method: "update_roles"
+    required_params: []
+    restricted_params: []
+  - microservice: "go-auth"
+    method: "delete_roles"
+    required_params: []
+    restricted_params: []
+  - microservice: "go-auth"
+    method: "attach_role"
+    required_params: []
+    restricted_params: []
+  - microservice: "go-auth"
+    method: "detach_role"
     required_params: []
     restricted_params: []
   - microservice: "go-auth"
     method: "get_roles"
     required_params: []
     restricted_params: []
+  - microservice: "go-auth"
+    method: "block_sto"
+    required_params: []
+    restricted_params: []
+  - microservice: "go-auth"
+    method: "unblock_sto"
+    required_params: []
+    restricted_params: []
+  - microservice: "go-auth"
+    method: "index_blocked_stos"
+    required_params: []
+    restricted_params: []
 
   # CountriesCatalog Service routes
   - microservice: "CountriesCatalog"
+    method: "add_country"
+    required_params: []
+    restricted_params: []
+  - microservice: "CountriesCatalog"
     method: "get_countries"
+    required_params: []
+    restricted_params: []
+  - microservice: "CountriesCatalog"
+    method: "edit_country"
+    required_params: []
+    restricted_params: []
+  - microservice: "CountriesCatalog"
+    method: "remove_country"
     required_params: []
     restricted_params: []
   - microservice: "CountriesCatalog"
@@ -25,7 +85,15 @@ permissions:
     required_params: []
     restricted_params: []
   - microservice: "CountriesCatalog"
+    method: "add_timezones"
+    required_params: []
+    restricted_params: []
+  - microservice: "CountriesCatalog"
     method: "get_currencies"
+    required_params: []
+    restricted_params: []
+  - microservice: "CountriesCatalog"
+    method: "add_currency"
     required_params: []
     restricted_params: []
 
@@ -34,16 +102,111 @@ permissions:
     method: "get"
     required_params: []
     restricted_params: []
+  - microservice: "CalendarService"
+    method: "add"
+    required_params: []
+    restricted_params: []
+  - microservice: "CalendarService"
+    method: "update"
+    required_params: []
+    restricted_params: []
+  - microservice: "CalendarService"
+    method: "remove"
+    required_params: []
+    restricted_params: []
 
   # GlobalVehicleModelsCatalog service routes
   - microservice: "GlobalVehicleModelsCatalog"
     method: "get"
     required_params: []
     restricted_params: []
+  - microservice: "GlobalVehicleModelsCatalog"
+    method: "save"
+    required_params: []
+    restricted_params: []
+  - microservice: "GlobalVehicleModelsCatalog"
+    method: "edit"
+    required_params: []
+    restricted_params: []
+  - microservice: "GlobalVehicleModelsCatalog"
+    method: "remove"
+    required_params: []
+    restricted_params: []
+  - microservice: "GlobalVehicleModelsCatalog"
+    method: "modification_get"
+    required_params: []
+    restricted_params: []
+  - microservice: "GlobalVehicleModelsCatalog"
+    method: "modification_save"
+    required_params: []
+    restricted_params: []
+  - microservice: "GlobalVehicleModelsCatalog"
+    method: "modification_edit"
+    required_params: []
+    restricted_params: []
+  - microservice: "GlobalVehicleModelsCatalog"
+    method: "modification_remove"
+    required_params: []
+    restricted_params: []
+
+  # GlobalAeroModelsCatalog service routes
+  - microservice: "GlobalAeroModelsCatalog"
+    method: "get"
+    required_params: [ ]
+    restricted_params: [ ]
+  - microservice: "GlobalAeroModelsCatalog"
+    method: "save"
+    required_params: [ ]
+    restricted_params: [ ]
+  - microservice: "GlobalAeroModelsCatalog"
+    method: "edit"
+    required_params: [ ]
+    restricted_params: [ ]
+  - microservice: "GlobalAeroModelsCatalog"
+    method: "remove"
+    required_params: [ ]
+    restricted_params: [ ]
+
+  # GlobalSherpModelsCatalog service routes
+  - microservice: "GlobalSherpModelsCatalog"
+    method: "get"
+    required_params: [ ]
+    restricted_params: [ ]
+  - microservice: "GlobalSherpModelsCatalog"
+    method: "save"
+    required_params: [ ]
+    restricted_params: [ ]
+  - microservice: "GlobalSherpModelsCatalog"
+    method: "edit"
+    required_params: [ ]
+    restricted_params: [ ]
+  - microservice: "GlobalSherpModelsCatalog"
+    method: "remove"
+    required_params: [ ]
+    restricted_params: [ ]
 
   # CategoryService routes
   - microservice: "CategoryService"
     method: "index_service"
+    required_params: []
+    restricted_params: []
+
+  # TurboSmsService routes
+  - microservice: "TurboSmsService"
+    method: "send"
+    required_params: []
+    restricted_params: []
+
+
+  # EmailService routes
+  - microservice: "EmailService"
+    method: "send"
+    required_params: []
+    restricted_params: []
+
+  # WebsocketService routes
+  - microservice: "WebsocketService"
+    method: "send"
     required_params: []
     restricted_params: []
 
@@ -59,17 +222,57 @@ permissions:
     required_params: []
     restricted_params: []
   - microservice: "ServicesStationsService"
+    method: "create"
+    required_params: []
+    restricted_params: []
+  - microservice: "ServicesStationsService"
     method: "getById"
+    required_params: []
+    restricted_params: []
+  - microservice: "ServicesStationsService"
+    method: "edit"
+    required_params: []
+    restricted_params: []
+  - microservice: "ServicesStationsService"
+    method: "remove"
     required_params: []
     restricted_params: []
   - microservice: "ServicesStationsService"
     method: "search_categories_services"
     required_params: []
     restricted_params: []
+  - microservice: "ServicesStationsService"
+    method: "update_specializations"
+    required_params: []
+    restricted_params: []
+  - microservice: "ServicesStationsService"
+    method: "update_order_settings"
+    required_params: []
+    restricted_params: []
+  - microservice: "ServicesStationsService"
+    method: "update_categories_services"
+    required_params: []
+    restricted_params: []
+  - microservice: "ServicesStationsService"
+    method: "upsert_custom_services"
+    required_params: []
+    restricted_params: []
+  - microservice: "ServicesStationsService"
+    method: "sync_act_acceptance_templates_examples"
+    required_params: []
+    restricted_params: []
 
   # CategoryHelperService routes
   - microservice: "CategoryHelperService"
     method: "get"
+    required_params: []
+    restricted_params: []
+  - microservice: "CategoryHelperService"
+    method: "load"
+    required_params: []
+    restricted_params: []
+  - microservice: "CategoryHelperService"
+    method: "relationships"
     required_params: []
     restricted_params: []
 
@@ -82,10 +285,44 @@ permissions:
     method: "getById"
     required_params: []
     restricted_params: []
+  - microservice: "OrdersService"
+    method: "create"
+    required_params: []
+    restricted_params: []
+  - microservice: "OrdersService"
+    method: "edit"
+    required_params: []
+    restricted_params: []
+  - microservice: "OrdersService"
+    method: "remove"
+    required_params: []
+    restricted_params: []
 
   # DocumentService routes
   - microservice: "DocumentService"
     method: "get"
+    required_params: []
+    restricted_params: []
+  - microservice: "DocumentService"
+    method: "generate_document"
+    required_params: []
+    restricted_params: []
+
+  # DocumentsCustomTemplates routes
+  - microservice: "DocumentsCustomTemplates"
+    method: "create"
+    required_params: []
+    restricted_params: []
+  - microservice: "DocumentsCustomTemplates"
+    method: "index"
+    required_params: []
+    restricted_params: []
+  - microservice: "DocumentsCustomTemplates"
+    method: "update"
+    required_params: []
+    restricted_params: []
+  - microservice: "DocumentsCustomTemplates"
+    method: "delete"
     required_params: []
     restricted_params: []
 
@@ -94,10 +331,50 @@ permissions:
     method: "index"
     required_params: []
     restricted_params: []
+  - microservice: "PostService"
+    method: "create"
+    required_params: []
+    restricted_params: []
+  - microservice: "PostService"
+    method: "update"
+    required_params: []
+    restricted_params: []
+  - microservice: "PostService"
+    method: "remove"
+    required_params: []
+    restricted_params: []
 
   # EmployeeService routes
   - microservice: "EmployeeService"
     method: "get"
+    required_params: []
+    restricted_params: []
+  - microservice: "EmployeeService"
+    method: "create"
+    required_params: []
+    restricted_params: []
+  - microservice: "EmployeeService"
+    method: "update"
+    required_params: []
+    restricted_params: []
+  - microservice: "EmployeeService"
+    method: "remove"
+    required_params: []
+    restricted_params: []
+  - microservice: "EmployeeService"
+    method: "attach"
+    required_params: []
+    restricted_params: []
+  - microservice: "EmployeeService"
+    method: "syncEmployeeUserRole"
+    required_params: []
+    restricted_params: []
+  - microservice: "EmployeeService"
+    method: "attach_salary_scheme"
+    required_params: []
+    restricted_params: []
+  - microservice: "EmployeeService"
+    method: "detach_salary_scheme"
     required_params: []
     restricted_params: []
 
@@ -106,10 +383,38 @@ permissions:
     method: "get"
     required_params: []
     restricted_params: []
+  - microservice: "ClientService"
+    method: "create"
+    required_params: []
+    restricted_params: []
+  - microservice: "ClientService"
+    method: "update"
+    required_params: []
+    restricted_params: []
+  - microservice: "ClientService"
+    method: "remove"
+    required_params: []
+    restricted_params: []
+  - microservice: "ClientService"
+    method: "attach"
+    required_params: []
+    restricted_params: []
 
   # VehicleService routes
   - microservice: "VehicleService"
     method: "get"
+    required_params: []
+    restricted_params: []
+  - microservice: "VehicleService"
+    method: "add"
+    required_params: []
+    restricted_params: []
+  - microservice: "VehicleService"
+    method: "update"
+    required_params: []
+    restricted_params: []
+  - microservice: "VehicleService"
+    method: "remove"
     required_params: []
     restricted_params: []
 
@@ -119,11 +424,47 @@ permissions:
     required_params: []
     restricted_params: []
   - microservice: "DiagnosticCardService"
+    method: "add"
+    required_params: []
+    restricted_params: []
+  - microservice: "DiagnosticCardService"
+    method: "update"
+    required_params: []
+    restricted_params: []
+  - microservice: "DiagnosticCardService"
+    method: "remove"
+    required_params: []
+    restricted_params: []
+  - microservice: "DiagnosticCardService"
     method: "get_tag"
     required_params: []
     restricted_params: []
   - microservice: "DiagnosticCardService"
+    method: "add_tag"
+    required_params: []
+    restricted_params: []
+  - microservice: "DiagnosticCardService"
+    method: "update_tag"
+    required_params: []
+    restricted_params: []
+  - microservice: "DiagnosticCardService"
+    method: "remove_tag"
+    required_params: []
+    restricted_params: []
+  - microservice: "DiagnosticCardService"
     method: "get_point"
+    required_params: []
+    restricted_params: []
+  - microservice: "DiagnosticCardService"
+    method: "add_point"
+    required_params: []
+    restricted_params: []
+  - microservice: "DiagnosticCardService"
+    method: "update_point"
+    required_params: []
+    restricted_params: []
+  - microservice: "DiagnosticCardService"
+    method: "remove_point"
     required_params: []
     restricted_params: []
 
@@ -133,7 +474,15 @@ permissions:
     required_params: []
     restricted_params: []
   - microservice: "ImportService"
+    method: "import_services"
+    required_params: []
+    restricted_params: []
+  - microservice: "ImportService"
     method: "get_client_import_template"
+    required_params: []
+    restricted_params: []
+  - microservice: "ImportService"
+    method: "import_clients"
     required_params: []
     restricted_params: []
 
@@ -197,26 +546,358 @@ permissions:
     required_params: []
     restricted_params: []
   - microservice: "PaymentService"
+    method: "syncPlan"
+    required_params: []
+    restricted_params: []
+  - microservice: "PaymentService"
+    method: "updatePlan"
+    required_params: []
+    restricted_params: []
+  - microservice: "PaymentService"
+    method: "changePlan"
+    required_params: []
+    restricted_params: []
+  - microservice: "PaymentService"
+    method: "generateCheckoutLink"
+    required_params: []
+    restricted_params: []
+  - microservice: "PaymentService"
     method: "getSubscription"
     required_params: []
     restricted_params: []
+  - microservice: "PaymentService"
+    method: "terminateSubscription"
+    required_params: []
+    restricted_params: []
 
-   #HelperServices
+  # UtilitySyncService routes
+  - microservice: "UtilitySyncService"
+    method: "sync_order_settings_templates"
+    required_params: []
+    restricted_params: []
+  - microservice: "UtilitySyncService"
+    method: "sync_sto_owner_roles_permissions"
+    required_params: []
+    restricted_params: []
+
+  #HelperServices
   - microservice: "HelperServices"
     method: "get_custom_services"
-    required_params: []
-    restricted_params: []
+    required_params: [ ]
+    restricted_params: [ ]
   - microservice: "HelperServices"
     method: "get_services"
-    required_params: []
-    restricted_params: []
+    required_params: [ ]
+    restricted_params: [ ]
+  - microservice: "HelperServices"
+    method: "save_custom_service"
+    required_params: [ ]
+    restricted_params: [ ]
+  - microservice: "HelperServices"
+    method: "bulk_save_custom_service"
+    required_params: [ ]
+    restricted_params: [ ]
+  - microservice: "HelperServices"
+    method: "save_child_custom_service"
+    required_params: [ ]
+    restricted_params: [ ]
+  - microservice: "HelperServices"
+    method: "edit_custom_service"
+    required_params: [ ]
+    restricted_params: [ ]
 
   #CustomServices
+  - microservice: "CustomServices"
+    method: "create"
+    required_params: []
+    restricted_params: []
+  - microservice: "CustomServices"
+    method: "bulk_create"
+    required_params: []
+    restricted_params: []
+  - microservice: "CustomServices"
+    method: "import_default_services"
+    required_params: []
+    restricted_params: []
+  - microservice: "CustomServices"
+    method: "import_default_services_sherp"
+    required_params: []
+    restricted_params: []
   - microservice: "CustomServices"
     method: "get"
     required_params: []
     restricted_params: []
   - microservice: "CustomServices"
     method: "get_tree"
+    required_params: []
+    restricted_params: []
+  - microservice: "CustomServices"
+    method: "update"
+    required_params: []
+    restricted_params: []
+  - microservice: "CustomServices"
+    method: "sync_services_post"
+    required_params: []
+    restricted_params: []
+  - microservice: "CustomServices"
+    method: "sync_services_employee"
+    required_params: []
+    restricted_params: []
+  - microservice: "CustomServices"
+    method: "delete"
+    required_params: []
+    restricted_params: []
+
+  #ReportService-templates
+  - microservice: "ReportService"
+    method: "templates.getTemplates"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "templates.createTemplate"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "templates.updateTemplate"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "templates.deleteTemplate"
+    required_params: []
+    restricted_params: []
+
+  #ReportService-schedules
+  - microservice: "ReportService"
+    method: "schedules.counts"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "schedules.posts"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "schedules.applications"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "schedules.applicationsChecked"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "schedules.applicationsRegister"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "schedules.applicationsCanceled"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "schedules.applicationsAvg"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "schedules.applicationsSum"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "schedules.applicationsFixiq"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "schedules.applicationsProfit"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "schedules.paymentsIncome"
+    required_params: []
+    restricted_params: []
+
+  #ReportService-tables
+  - microservice: "ReportService"
+    method: "tables.applications"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "tables.applicationsChecked"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "tables.applicationsRegister"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "tables.applicationsCanceled"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "tables.applicationsAvg"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "tables.applicationsSum"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "tables.applicationsFixiq"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "tables.applicationsProfit"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "tables.paymentsIncome"
+    required_params: []
+    restricted_params: []
+
+  #ReportService-users
+  - microservice: "ReportService"
+    method: "users.applications"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "users.applicationsByUser"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "users.services"
+    required_params: []
+    restricted_params: []
+  - microservice: "ReportService"
+    method: "users.servicesByUser"
+    required_params: []
+    restricted_params: []
+
+  #PriceTypes
+  - microservice: "PriceTypes"
+    method: "create"
+    required_params: []
+    restricted_params: []
+  - microservice: "PriceTypes"
+    method: "index"
+    required_params: []
+    restricted_params: []
+  - microservice: "PriceTypes"
+    method: "update"
+    required_params: []
+    restricted_params: []
+  - microservice: "PriceTypes"
+    method: "delete"
+    required_params: []
+    restricted_params: []
+
+  #GoReportService
+  - microservice: "GoReportService"
+    method: "index"
+    required_params: []
+    restricted_params: []
+  - microservice: "GoReportService"
+    method: "reindex"
+    required_params: []
+    restricted_params: []
+  - microservice: "GoReportService"
+    method: "report"
+    required_params: []
+    restricted_params: []
+  - microservice: "GoReportService"
+    method: "salary_index"
+    required_params: []
+    restricted_params: []
+  - microservice: "GoReportService"
+    method: "salary_update"
+    required_params: []
+    restricted_params: []
+
+  #DictionaryService
+  - microservice: "Dictionary"
+    method: "create"
+    required_params: []
+    restricted_params: []
+  - microservice: "Dictionary"
+    method: "read"
+    required_params: []
+    restricted_params: []
+  - microservice: "Dictionary"
+    method: "update"
+    required_params: []
+    restricted_params: []
+  - microservice: "Dictionary"
+    method: "delete"
+    required_params: []
+    restricted_params: []
+
+
+  #ManagementAccountingDictionaryService
+  - microservice: "ManagementAccountingDictionary"
+    method: "save"
+    required_params: []
+    restricted_params: []
+  - microservice: "ManagementAccountingDictionary"
+    method: "get"
+    required_params: []
+    restricted_params: []
+  - microservice: "ManagementAccountingDictionary"
+    method: "update"
+    required_params: []
+    restricted_params: []
+  - microservice: "ManagementAccountingDictionary"
+    method: "delete"
+    required_params: []
+    restricted_params: []
+
+
+  #NotificationsService
+  - microservice: "NotificationsService"
+    method: "create_custom_delayed"
+    required_params: []
+    restricted_params: []
+  - microservice: "NotificationsService"
+    method: "index"
+    required_params: []
+    restricted_params: []
+  - microservice: "NotificationsService"
+    method: "update"
+    required_params: []
+    restricted_params: []
+
+  #SalaryScheme
+  - microservice: "SalaryScheme"
+    method: "save"
+    required_params: []
+    restricted_params: []
+  - microservice: "SalaryScheme"
+    method: "get"
+    required_params: []
+    restricted_params: []
+  - microservice: "SalaryScheme"
+    method: "update"
+    required_params: []
+    restricted_params: []
+  - microservice: "SalaryScheme"
+    method: "delete"
+    required_params: []
+    restricted_params: []
+
+  #ServiceStationS3Storage
+  - microservice: "ServiceStationS3Storage"
+    method: "upload"
+    required_params: []
+    restricted_params: []
+  - microservice: "ServiceStationS3Storage"
+    method: "index"
+    required_params: []
+    restricted_params: []
+  - microservice: "ServiceStationS3Storage"
+    method: "get_link"
+    required_params: []
+    restricted_params: []
+  - microservice: "ServiceStationS3Storage"
+    method: "delete"
+    required_params: []
+    restricted_params: []
+
+  #EmployeeRolesHelper
+  - microservice: "EmployeeRolesHelper"
+    method: "sto.make_employees_roles"
     required_params: []
     restricted_params: []

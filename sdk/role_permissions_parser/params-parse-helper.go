@@ -15,12 +15,21 @@ func GetOwnerRoleParsed(paramsToChange map[string]string) (*role_permissions_mod
 }
 
 func GetSupportAdminRoleParsed(paramsToChange map[string]string) (*role_permissions_models.Role, error) {
-	ownerRoleConfigLoaded, errRoleLoad := role_permissions_config.GetSupportAdminRoleConfig()
+	supportRoleConfigLoaded, errRoleLoad := role_permissions_config.GetSupportAdminRoleConfig()
 	if errRoleLoad != nil {
 		return nil, errRoleLoad
 	}
 
-	return prepareRole(ownerRoleConfigLoaded, paramsToChange)
+	return prepareRole(supportRoleConfigLoaded, paramsToChange)
+}
+
+func GetPublicRoleParsed(paramsToChange map[string]string) (*role_permissions_models.Role, error) {
+	publicRoleConfigLoaded, errRoleLoad := role_permissions_config.GetPublicRoleConfig()
+	if errRoleLoad != nil {
+		return nil, errRoleLoad
+	}
+
+	return prepareRole(publicRoleConfigLoaded, paramsToChange)
 }
 
 func prepareRole(loadedRole *role_permissions_models.Role, paramsToChange map[string]string) (*role_permissions_models.Role, error) {

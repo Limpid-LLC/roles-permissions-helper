@@ -1,0 +1,28 @@
+type: "public"
+sto_id: "-1"
+data:
+  alias: "public-role"
+  name: "Public Role"
+permissions:
+
+  # CategoryService routes
+  - microservice: "CategoryService"
+    method: "index_service"
+    required_params: []
+    restricted_params: []
+
+  # ServicesStationsService routes
+  - microservice: "ServicesStationsService"
+    method: "index"
+    required_params: []
+    restricted_params: []
+  - microservice: "ServicesStationsService"
+    method: "getById"
+    required_params: []
+    restricted_params: []
+
+  # B2C-Dictionary routes
+  - microservice: "B2CDictionary"
+    method: "index"
+    required_params: []
+    restricted_params: []

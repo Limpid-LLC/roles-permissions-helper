@@ -55,10 +55,6 @@ permissions:
     required_params: []
     restricted_params: []
   - microservice: "CountriesCatalog"
-    method: "edit_country"
-    required_params: []
-    restricted_params: []
-  - microservice: "CountriesCatalog"
     method: "remove_country"
     required_params: []
     restricted_params: []
@@ -129,6 +125,72 @@ permissions:
   - microservice: "GlobalVehicleModelsCatalog"
     method: "modification_remove"
     required_params: []
+    restricted_params: []
+
+  # CustomVehicleModelsCatalog service routes
+  - microservice: "CustomVehicleModelsCatalog"
+    method: "get"
+    required_params:
+      - all: false
+        param: "sto_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "CustomVehicleModelsCatalog"
+    method: "save"
+    required_params:
+      - all: false
+        param: "sto_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "CustomVehicleModelsCatalog"
+    method: "edit"
+    required_params:
+      - all: false
+        param: "sto_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "CustomVehicleModelsCatalog"
+    method: "remove"
+    required_params:
+      - all: false
+        param: "sto_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "CustomVehicleModelsCatalog"
+    method: "modification_get"
+    required_params:
+      - all: false
+        param: "sto_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "CustomVehicleModelsCatalog"
+    method: "modification_save"
+    required_params:
+      - all: false
+        param: "sto_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "CustomVehicleModelsCatalog"
+    method: "modification_edit"
+    required_params:
+      - all: false
+        param: "sto_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "CustomVehicleModelsCatalog"
+    method: "modification_remove"
+    required_params:
+      - all: false
+        param: "sto_id"
+        values:
+          - "$stoId"
     restricted_params: []
 
   # GlobalAeroModelsCatalog service routes
@@ -351,6 +413,41 @@ permissions:
     restricted_params: []
   - microservice: "DocumentService"
     method: "generate_document"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+
+
+  # DocumentsCustomTemplates routes
+  - microservice: "DocumentsCustomTemplates"
+    method: "create"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "DocumentsCustomTemplates"
+    method: "index"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "DocumentsCustomTemplates"
+    method: "update"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: []
+  - microservice: "DocumentsCustomTemplates"
+    method: "delete"
     required_params:
       - all: false
         param: "service_station_id"
@@ -1221,7 +1318,6 @@ permissions:
           - "$stoId"
     restricted_params: [ ]
 
-
   #NotificationsService
   - microservice: "NotificationsService"
     method: "create_custom_delayed"
@@ -1286,17 +1382,16 @@ permissions:
           - "$stoId"
     restricted_params: [ ]
 
-
-  #NotificationsService
-  - microservice: "NotificationsService"
-    method: "create_custom_delayed"
+  #ServiceStationS3Storage
+  - microservice: "ServiceStationS3Storage"
+    method: "upload"
     required_params:
       - all: false
         param: "service_station_id"
         values:
           - "$stoId"
     restricted_params: [ ]
-  - microservice: "NotificationsService"
+  - microservice: "ServiceStationS3Storage"
     method: "index"
     required_params:
       - all: false
@@ -1304,8 +1399,16 @@ permissions:
         values:
           - "$stoId"
     restricted_params: [ ]
-  - microservice: "NotificationsService"
-    method: "update"
+  - microservice: "ServiceStationS3Storage"
+    method: "get_link"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "ServiceStationS3Storage"
+    method: "delete"
     required_params:
       - all: false
         param: "service_station_id"
@@ -1354,6 +1457,16 @@ permissions:
     required_params:
       - all: false
         param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+
+  #GoReportIndexService
+  - microservice: "GoReportIndexService"
+    method: "salary_index"
+    required_params:
+      - all: false
+        param: "sto_id"
         values:
           - "$stoId"
     restricted_params: [ ]
