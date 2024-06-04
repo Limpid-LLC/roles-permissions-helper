@@ -257,7 +257,11 @@ permissions:
   # OpenDataBot service routes
   - microservice: "OpenDataBot"
     method: "find"
-    required_params: []
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
     restricted_params: []
 
   # ServicesStationsService routes
