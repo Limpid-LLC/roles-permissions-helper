@@ -185,6 +185,24 @@ permissions:
     required_params: [ ]
     restricted_params: [ ]
 
+  # GlobalQuarryModelsCatalog service routes
+  - microservice: "GlobalQuarryModelsCatalog"
+    method: "get"
+    required_params: [ ]
+    restricted_params: [ ]
+  - microservice: "GlobalQuarryModelsCatalog"
+    method: "save"
+    required_params: [ ]
+    restricted_params: [ ]
+  - microservice: "GlobalQuarryModelsCatalog"
+    method: "edit"
+    required_params: [ ]
+    restricted_params: [ ]
+  - microservice: "GlobalQuarryModelsCatalog"
+    method: "remove"
+    required_params: [ ]
+    restricted_params: [ ]
+
   # CategoryService routes
   - microservice: "CategoryService"
     method: "index_service"
