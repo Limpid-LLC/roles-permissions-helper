@@ -1483,6 +1483,40 @@ permissions:
           - "$stoId"
     restricted_params: [ ]
 
+  #CalculationCardsService
+  - microservice: "CalculationCardsService"
+    method: "create"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "CalculationCardsService"
+    method: "index"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "CalculationCardsService"
+    method: "update"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "CalculationCardsService"
+    method: "delete"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+
   #GoReportIndexService
   - microservice: "GoReportIndexService"
     method: "salary_index"
