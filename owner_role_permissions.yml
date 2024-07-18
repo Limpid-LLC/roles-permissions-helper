@@ -1517,6 +1517,60 @@ permissions:
           - "$stoId"
     restricted_params: [ ]
 
+  #WishlistDictionary
+  - microservice: "WishlistDictionary"
+    method: "create"
+    required_params:
+      - all: false
+        param: "document.sto_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "WishlistDictionary"
+    method: "read"
+    required_params:
+      - all: false
+        param: "select.sto_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "WishlistDictionary"
+    method: "update"
+    required_params:
+      - all: false
+        param: "select.sto_id"
+        values:
+          - "$stoId"
+      - all: false
+        param: "document.sto_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "WishlistDictionary"
+    method: "delete"
+    required_params:
+      - all: false
+        param: "select.sto_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "WishlistDictionary"
+    method: "config.save"
+    required_params:
+      - all: false
+        param: "sto_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+  - microservice: "WishlistDictionary"
+    method: "config.get"
+    required_params:
+      - all: false
+        param: "sto_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
+
   #GoReportIndexService
   - microservice: "GoReportIndexService"
     method: "salary_index"
