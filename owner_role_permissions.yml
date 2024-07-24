@@ -1526,6 +1526,14 @@ permissions:
         values:
           - "$stoId"
     restricted_params: [ ]
+  - microservice: "CometchatIntegrationService"
+    method: "get_integration_by_cometchat_uuid"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
 
   #WishlistDictionary
   - microservice: "WishlistDictionary"
