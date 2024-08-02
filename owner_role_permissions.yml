@@ -1516,6 +1516,14 @@ permissions:
         values:
           - "$stoId"
     restricted_params: [ ]
+  - microservice: "CalculationCardsService"
+    method: "import"
+    required_params:
+      - all: false
+        param: "service_station_id"
+        values:
+          - "$stoId"
+    restricted_params: [ ]
 
   #CometchatIntegrationService
   - microservice: "CometchatIntegrationService"
